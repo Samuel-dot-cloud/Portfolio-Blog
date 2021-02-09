@@ -1,0 +1,24 @@
+<section>
+  <mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Create a Post.
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <section>
+      <mat-form-field>
+        <input matInput placeholder="Post Title" [(ngModel)]="title">
+      </mat-form-field>
+    </section>
+    <section>
+      <ckeditor [(ngModel)]="content">
+      </ckeditor>
+    </section>
+    <section>
+    <button mat-raised-button color="accent" (click)="createPost()" [disabled]="!title || !content">Create Post</button>
+    </section>
+  </mat-expansion-panel>
+</mat-accordion>
+</section>
+
