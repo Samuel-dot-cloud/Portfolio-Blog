@@ -11,7 +11,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
 })
 export class PostDashboardComponent implements OnInit {
   title?: string
-  image: string | any = null;
+  image?: string | any;
   content?: string;
 
   buttonText: string = "Create Post";
@@ -21,8 +21,7 @@ export class PostDashboardComponent implements OnInit {
 
   constructor(private auth: AuthService, private postService: PostService, private storage: AngularFireStorage) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   createPost() {
     const data = {
@@ -36,6 +35,7 @@ export class PostDashboardComponent implements OnInit {
     this.postService.createPost(data)
     this.title = "";
     this.content = "";
+    this.image = "";
     this.buttonText = "Post Created!";
     setTimeout(() => this.buttonText = "Create Post", 3000);
   }

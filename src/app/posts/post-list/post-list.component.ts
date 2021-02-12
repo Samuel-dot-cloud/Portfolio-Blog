@@ -12,9 +12,7 @@ import { PostService} from '../post.service';
 export class PostListComponent implements OnInit {
   posts?: Observable<Post[]> | any
 
-  public name: string = '**The Big Bang Theory**';
-  public text: string = 'Custom **Markdown in Angular** example!';
-
+  
   constructor(private postService: PostService, public auth: AuthService) { }
 
   ngOnInit() {
