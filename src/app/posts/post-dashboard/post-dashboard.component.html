@@ -6,17 +6,26 @@
         Create a Post.
       </mat-panel-title>
     </mat-expansion-panel-header>
+    <div>
+      <input type="file" name="file" id="file" (change)="uploadImage($event)">
+      <div [hidden]="!uploadPercent">
+        <mat-progress-bar mode="determinate" value="{{uploadPercent | async}}"></mat-progress-bar>
+      </div>
+      <div [hidden]="!image">
+        <img [src]="image || '//:0'">
+      </div>
+    </div>
     <section>
       <mat-form-field>
         <input matInput placeholder="Post Title" [(ngModel)]="title">
       </mat-form-field>
     </section>
     <section>
-      <ckeditor [(ngModel)]="content">
+      <ckeditor [(ngModel)]="content" rows="20">
       </ckeditor>
     </section>
     <section>
-    <button mat-raised-button color="accent" (click)="createPost()" [disabled]="!title || !content">Create Post</button>
+    <button mat-raised-button color="accent" (click)="createPost()" [disabled]="!title || !content">{{buttonText}}</button>
     </section>
   </mat-expansion-panel>
 </mat-accordion>
