@@ -4,21 +4,15 @@ import { PostDashboardComponent } from './post-dashboard/post-dashboard.componen
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostService } from './post.service';
-import { RouterModule, Routes } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 
 
-const routes: Routes = [
-  {path: 'blog', component: PostListComponent},
-  {path: 'blog/:id', component: PostDetailComponent},
-  {path: 'dashboard', component: PostDashboardComponent}
-]
+
 
 @NgModule({
   declarations: [PostDashboardComponent, PostDetailComponent, PostListComponent],
   imports: [
     SharedModule,
-    RouterModule.forChild(routes),
     MarkdownModule.forChild()
   ],
   providers: [

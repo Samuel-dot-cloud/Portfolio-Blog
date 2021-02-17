@@ -11,15 +11,11 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostsModule } from './posts/posts.module';
-import { RouterModule, Routes } from '@angular/router';
 import { MarkedPipe } from './marked.pipe';
 
 
 
-const routes: Routes = [
-  {path: '', redirectTo: '/blog', pathMatch: 'full'},
-  {path: '', loadChildren: './posts/posts.module#PostsModule'}
-]
+
 
 @NgModule({
   declarations: [
@@ -31,7 +27,6 @@ const routes: Routes = [
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
