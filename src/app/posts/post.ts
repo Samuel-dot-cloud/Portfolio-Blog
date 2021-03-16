@@ -5,5 +5,5 @@ export class Post {
     authorId?: string
     image?: string
     content?: string 
-    published?: Date
+    published?: Date;
 }

@@ -11,9 +11,9 @@ import { finalize } from 'rxjs/operators';
   styleUrls: ['./post-dashboard.component.scss']
 })
 export class PostDashboardComponent implements OnInit {
-  title?: string
+  title?: string | any;
   image?: string | any;
-  content?: string;
+  content?: string | any;
 
   buttonText: string = "Create Post";
 

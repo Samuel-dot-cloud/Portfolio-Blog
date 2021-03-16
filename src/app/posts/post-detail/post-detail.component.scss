@@ -1,16 +1,41 @@
 mat-card {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 button {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 mat-form-field {
-    width: 100%;
+  width: 100%;
+}
+
+.blog_img {
+  width: 60%;
+  margin: auto;
+  display: block;
+  max-height: 300px;
+}
+
+.blog-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 50px;
+  text-align: center;
+}
+
+.blog_details {
+  font-family: 'Fredoka One', cursive;
+  float: left;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.blog-extras {
+  font-family: 'Syne Mono', monospace;
+  font-size: 20px;
 }
