@@ -11,7 +11,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostsModule } from './posts/posts.module';
-import { MarkedPipe } from './marked.pipe';
 
 
 
@@ -19,8 +18,7 @@ import { MarkedPipe } from './marked.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MarkedPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,

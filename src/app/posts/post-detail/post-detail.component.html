@@ -23,7 +23,7 @@
       <h5 class="blog-extras">Posted by {{post.author}}.</h5>
       <h6 class="blog-extras">Date published: {{post.published | date: 'MM/dd/yyyy'}}</h6>
       <mat-card-content>
-        <h1 class="blog-title">{{post.title}}</h1> |
+        <h1 class="blog-title">{{post.title}}</h1> 
         <p class="blog_details" [innerHTML]="post.content"></p>
       </mat-card-content>
       <mat-card-actions align="end" *ngIf="auth.currentUserId === post.authorId">
