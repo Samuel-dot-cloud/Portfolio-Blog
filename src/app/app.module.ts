@@ -11,6 +11,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostsModule } from './posts/posts.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 
@@ -29,7 +30,8 @@ import { PostsModule } from './posts/posts.module';
     AngularFirestoreModule,
     AngularFireAuthModule,
     BrowserAnimationsModule,
-    PostsModule
+    PostsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
