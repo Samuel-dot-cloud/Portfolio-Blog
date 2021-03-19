@@ -20,8 +20,8 @@ export class PostDetailComponent implements OnInit {
   }
 
   getPost() {
-    const id = this.route.snapshot.paramMap.get('id')
-    return this.postService.getPostData(id!).subscribe(data => this.post = data)
+    const id = this.route.snapshot.paramMap.get('id');
+    return this.postService.getPostData(id!).subscribe(data => this.post = data);
   }
 
   updatePost(){
@@ -37,7 +37,7 @@ export class PostDetailComponent implements OnInit {
   delete(){
     const id = this.route.snapshot.paramMap.get('id');
     this.postService.deletePost(id!);
-    this.router.navigate(["/blog"])
+    this.router.navigate(["/blog"]);
   }
 
 }

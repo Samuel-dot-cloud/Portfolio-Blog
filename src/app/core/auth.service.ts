@@ -12,18 +12,18 @@ export class AuthService {
    }
 
    get authenticated(): boolean {
-     return this.authState != null
+     return this.authState != null;
    };
 
    get currentUserId(): string {
-     return this.authenticated ? this.authState.uid : null
+     return this.authenticated ? this.authState.uid : null;
    };
 
   login(){
-    this.afAuth.signInWithPopup(new firebase.default.auth.GoogleAuthProvider())
+    this.afAuth.signInWithPopup(new firebase.default.auth.GoogleAuthProvider());
   };
 
   logout(){
-    this.afAuth.signOut()
+    this.afAuth.signOut();
   };
 }

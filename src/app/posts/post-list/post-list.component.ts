@@ -10,14 +10,14 @@ import { PostService} from '../post.service';
   styleUrls: ['./post-list.component.scss']
 })
 export class PostListComponent implements OnInit {
-  posts?: Observable<Post[]> | any
+  posts?: Observable<Post[]> | any;
 
   
   constructor(private postService: PostService, public auth: AuthService) { }
 
   ngOnInit() {
-    this.posts = this.postService.getPosts()
-    console.log(this)
+    this.posts = this.postService.getPosts();
+    console.log(this);
   }
 
   delete(id: string){

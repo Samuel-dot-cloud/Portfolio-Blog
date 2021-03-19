@@ -13,7 +13,7 @@ export class PostService {
 
   constructor(private afs: AngularFirestore) {
     this.postsCollection = this.afs.collection('Posts', ref =>
-      ref.orderBy('published', 'desc'))
+      ref.orderBy('published', 'desc'));
   }
 
   getPosts(){
@@ -32,7 +32,7 @@ export class PostService {
   }
 
   createPost(data: Post){
-    this.postsCollection?.add(data)
+    this.postsCollection?.add(data);
   }
 
   getPost(id: string){
